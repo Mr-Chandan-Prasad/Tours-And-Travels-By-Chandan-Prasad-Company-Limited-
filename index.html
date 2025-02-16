@@ -1,0 +1,63 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour & Travel Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <script>
+        function showPopup(pageName) {
+            event.preventDefault();
+            document.getElementById('popup-text').innerText = `You clicked on ${pageName}`;
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="script" href="scripts.js">
+    
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Tour & Travel</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+            <li><a href="signin.html">Tracking</a></li>
+            <li><a href="signup.html">Tracking</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="signin.html" class="signin-btn">Sign In</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
+    
+    

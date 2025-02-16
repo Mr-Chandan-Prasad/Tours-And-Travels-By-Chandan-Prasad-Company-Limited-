@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Ticket</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Tour & Travel</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="tickets.html">Tickets</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+        <div class="auth-buttons">
+            <a href="signin.html" class="signin-btn">Sign In</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="tracking-container">
+        <h1>Track Your Ticket</h1>
+        <p>Enter your booking ID to track your ticket status.</p>
+        <input type="text" id="booking-id" placeholder="Enter Booking ID">
+        <button class="track-btn">Track</button>
+
+        <div class="tracking-result" id="tracking-result">
+            <h2>Status: <span id="status">Pending</span></h2>
+            <p>Expected Departure: <span id="departure-date">N/A</span></p>
+            <p>Current Location: <span id="location">N/A</span></p>
+        </div>
+    </div>
+</body>
+
+</html>

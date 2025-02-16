@@ -1,0 +1,691 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: auto;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 20px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Auth Buttons */
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.signin-btn,
+.signup-btn {
+    text-decoration: none;
+    color: white;
+    padding: 20px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.signin-btn {
+    background: transparent;
+    border: transparent;
+}
+
+.signup-btn {
+    background: transparent;
+    border: transparent;
+}
+
+.signin-btn:hover {
+    background: transparent;
+    color: #5b86e5;
+}
+
+.signup-btn:hover {
+    background: transparent;
+    color: #36d1dc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .auth-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.navbar {
+    background: linear-gradient(90deg, #1E40AF, #3B82F6);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(246, 246, 246, 0.1);
+}
+
+.logo {
+    color: rgb(238, 113, 60);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ad385f;
+}
+
+/* profile Page Styles */
+
+.profile-container {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    animation: slideIn 1s ease-in-out;
+}
+
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #FF6B6B;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite alternate;
+}
+
+.edit-profile {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.edit-profile:hover {
+    background: #E64A19;
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-5px);
+    }
+}
+
+/* booking Page Styles */
+
+
+.booking-container {
+    background: rgb(241, 241, 241);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 600px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input,
+select,
+textarea {
+    width: auto;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.book-btn {
+    background: #ff5f6d;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #ad99cc;
+}
+
+/* Confirmation Message Popup */
+.confirmation-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d4edda;
+    color: #155724;
+    border-left: 5px solid #4abf65dc;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+    z-index: 1001;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+
+/* Tickets Page Styles */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1E3C72, #2A5298);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links .active {
+    color: #FF5722;
+}
+
+.tickets-container {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.ticket-card {
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.ticket-card:hover {
+    transform: scale(1.05);
+}
+
+.view-ticket {
+    background: #FF5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.view-ticket:hover {
+    background: #ad99cc;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Packages Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1d3501, #f8f5f6);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links .active {
+    color: #ffffff;
+}
+
+/* Packages Container */
+.packages-container {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Heading */
+.packages-container h1 {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Package Card */
+.package-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    text-align: center;
+    margin: 15px;
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Image Styling */
+.package-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Package Title */
+.package-card h2 {
+    margin-top: 15px;
+    color: #000000;
+}
+
+/* Description */
+.package-card p {
+    color: #555;
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+/* Book Now Button */
+.book-now {
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #E64A19;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.book-now:hover {
+    background-color: #694c8d;
+}
+
+/* Hover Effect */
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .package-card {
+        width: 90%;
+    }
+}
+
+
+/* Tracking Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d38a14, #124d94);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.navbar {
+    background:transparent;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links .active {
+    color: #52270c;
+}
+
+.tracking-container {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: auto;
+    animation: slideIn 1s ease-in-out;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.track-btn {
+    background: #FF6B6B;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.track-btn:hover {
+    background: #E64A19;
+    transform: scale(1.1);
+}
+
+.tracking-result {
+    margin-top: 20px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.tracking-result:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Auth Page Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #36d1dc, #5b86e5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.auth-btn {
+    background: #5b86e5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+    background: #4a75d3;
+}
+
+p {
+    margin-top: 15px;
+    background:transparent;
+}
+p.text {
+    color: #ea0909;
+    font-size: 14px;
+}
+a {
+    color: #5b86e5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
